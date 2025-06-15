@@ -11,6 +11,9 @@ In this stage, we want to be able to compile 2 targets:
 1. Our project's executable.
 2. Our project's unittests executable.
 
+> [!NOTE]
+> This stage has a `Hints` directory with hints for each step. If you find yourself a bit stuck on what to do - don't hesitate to take a look there!
+
 ## Objective Steps
 
 1. Read about `add_subdirectory()` and `add_library()` commands in CMake and think about how you can utilize them to create a more modular CMake generation.
