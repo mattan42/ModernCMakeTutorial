@@ -1,15 +1,23 @@
 cmake_minimum_required(VERSION 3.28)
 project(stage_2)
 
-# Setting a cmake variable for convenienve.
-set(MAIN_EXECUTABLE_SOURCES main.cpp)
+# Collecting all the library sources
+file(GLOB_RECURSE ${PROJECT_NAME}_lib_sources ./src/*.cpp)
 
-# Adding the main executable with it's sources.
-add_executable(main ${MAIN_EXECUTABLE_SOURCES})
+# Removing the main.cpp from the sources of the library
+list(REMOVE_ITEM ${PROJECT_NAME}_lib_sources main.cpp)¶
 
-# Doing the same for `another_main.cpp`
-set(ANOTHER_MAIN_EXECUTABLE_SOURCES another_main.cpp)
-add_executable(another_main ${ANOTHER_MAIN_EXECUTABLE_SOURCES})
+# Creating a new library for the project
+add_library(${PROJECT_NAME}_lib ${${PROJECT_NAME}_lib_sources})
 
-# Adding the `DONT_PRINT_HELLO_WORLD` define only to another_main
-target_compile_definitions(another_main PRIVATE DONT_PRINT_HELLO_WORLD)
+# Adding the include directories to the library
+target_include_directories(${PROJECT_NAME}_lib PUBLIC ./include)
+
+# Adding the main executable
+add_executable(${PROJECT_NAME} ./src/main.cpp)
+
+# Linking the project's lib to the project's executable (project's enrtry point)
+target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}_lib)
+
+# Visiting the unittests' CMakeLists.txt
+add_subdirectory(unittests)
