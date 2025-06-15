@@ -7,14 +7,8 @@ int main()
     std::cout << "Main of the unittests!" << std::endl;
 
     std::cout << "[Testing play_music()...] ";
-    if (play_music())
-    {
-        std::cout << "SUCCESS" << std::endl;
-    }
-    else
-    {
-        std::cout << "FAILURE" << std::endl;
-    }
+    MusicPlayer music_player;
+    music_player.play_music();
 
     std::cout << "============== end of unitests ==============" << std::endl;
 

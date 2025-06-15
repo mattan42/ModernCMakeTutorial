@@ -5,7 +5,8 @@
 int main()
 {
     std::cout << "Trying to play music..." << std::endl;
-    play_music();
+    MusicPlayer music_player;
+    music_player.play_music();
 
     return EXIT_SUCCESS;
 }
