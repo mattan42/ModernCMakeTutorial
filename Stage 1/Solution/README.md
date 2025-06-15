@@ -7,7 +7,7 @@ Several basic things are needed to be in the `CMakeLists.txt` file:
 - The `project()` function specifies the name of the cmake project.
 - The `add_executable` adds an "executable target", as well as specifying it's sources.
 
-> [!Info]
+> [!NOTE]
 > Even without the variable (`add_executable(main main.cpp)`) the function will still work the same.
 
 2. Compile and run the `main.cpp` file. Make sure you can see the prints.
@@ -54,6 +54,6 @@ This step illustrates the direct connection between the "cmake" targets to the t
 
 In a nutshell (since this isn't a "Makefiles" tutorial), when you run `make`, all targets defined in the Makefile will be built. However, you can define exactly which target you want to build, and so make will build only that target.
 
-> [!info]
+> [!NOTE]
 > While now this doesn't seem too useful now, it'll become quite useful in later stages.
 
