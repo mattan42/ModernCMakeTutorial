@@ -4,7 +4,7 @@
 
 1. Read the [Initial Explanation](#initial-explanation) in this README file.
 2. You are provided with some source files in the `Problem` directory. Don't modify them. You are free to create other files as you wish.
-3. Follow the steps in the [objective](#objective) section.
+3. Follow the steps in the [objective steps](#objective-steps) section.
 
 ## Initial Explanation
 
@@ -27,7 +27,7 @@ This command tells cmake to generate the build system in the directory specified
 The second command, `make` is using the Make build-system to compile your project.
 `-C` just tells it to `cd` to the directory `build` before running `make`.
 
-## Objective
+## Objective Steps
 
 1. Create a `CMakeLists.txt` file which compiles the `main.cpp` file.
 2. Compile and run the `main.cpp` file. Make sure you can see the prints.
