@@ -1,7 +1,8 @@
 #include "music_player.hpp"
 #include <iostream>
 
-void play_music()
+void MusicPlayer::play_music()
 {
     std::cout << "Playing music!" << std::endl;
+    return true;
 }
