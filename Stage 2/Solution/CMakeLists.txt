@@ -5,7 +5,7 @@ project(stage_2)
 file(GLOB_RECURSE ${PROJECT_NAME}_lib_sources ./src/*.cpp)
 
 # Removing the main.cpp from the sources of the library
-list(REMOVE_ITEM ${PROJECT_NAME}_lib_sources main.cpp)¶
+list(REMOVE_ITEM ${PROJECT_NAME}_lib_sources main.cpp)
 
 # Creating a new library for the project
 add_library(${PROJECT_NAME}_lib ${${PROJECT_NAME}_lib_sources})
