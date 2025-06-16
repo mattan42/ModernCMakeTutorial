@@ -67,3 +67,9 @@ The key points to take from this stage are:
 - How we can utilize `add_subdirectory` to create more modular CMake environments, without having all the logic cramped into one `CMakeLists.txt` file.
 - How the `PRIVATE` and `PUBLIC` scope keywords matter when linking against different targets.
 
+
+# Extra Notes
+
+> [!WARNING]
+> Throughout the solution, the CMake variable `${PROJECT_NAME}` was used. However, this is considered not the best practice. As soon as one CMake files builds more than 1 or 2 targets, or in the case of a `CMakeLists.txt` which can be used both as a root project and from an `add_subdirectory`, using the `PROJECT_NAME` variable can cause bugs.
+> The general advice I have here is - use it carefully when you know what you are doing.
