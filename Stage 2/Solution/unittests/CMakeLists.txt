@@ -8,7 +8,7 @@ set(PARENT_PROJECT_NAME ${PROJECT_NAME})
 project(${PARENT_PROJECT_NAME}_unittests)
 
 # Adding the unittests executable with it's sources
-add_executable(${PROJECT_NAME} ./main.cpp)
+add_executable(${PROJECT_NAME} EXCLUDE_FROM_ALL ./main.cpp)
 
 # Linking to the project's library
 target_link_libraries(${PROJECT_NAME} PRIVATE ${PARENT_PROJECT_NAME}_lib)

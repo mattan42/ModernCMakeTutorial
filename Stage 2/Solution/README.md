@@ -57,6 +57,9 @@ In the unittests' `CMakeLists.txt` file, we do the exact same - create an execut
 
 This step just forces us to use `add_subdirectory()`. If the compilation of the unittests and the main project are two different `CMakeLists.txt` files that don't have any connections, we would have to run `cmake` twice (on each directory).
 
+> [!NOTE]
+> The `EXTRACT_FROM_ALL` is *optional*. This just means that if we run `make` without any targets (which means *all* targets), then the unittests target would not be built; It would be built only if specified directly.
+
 # Key Points
 
 Whoa! Long explanation and defenitly not an easy stage.
