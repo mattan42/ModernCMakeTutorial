@@ -17,6 +17,7 @@ In this stage, we want to be able to compile 2 targets:
 ## Objective Steps
 
 1. Read about `add_subdirectory()` and `add_library()` commands in CMake and think about how you can utilize them to create a more modular CMake generation.
+    - Also, since that may be of help - read the "Debugging CMake" document in the appendix dir in this repo's root.
 2. Add a root `CMakeLists.txt` file, compile with it the project.
 3. Add a `CMakeLists.txt` file for the unittests.
 4. Compile both the project's executable and the unittests' executable using:
