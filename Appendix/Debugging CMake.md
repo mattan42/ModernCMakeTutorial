@@ -28,3 +28,28 @@ This command can be very complex if needed (as always, you're advised to look at
 ```cmake
 message(FATAL_ERROR "After printing this message, since it's a \"fatal error\", CMake would stop execution immediately")
 ```
+
+
+## Watching Variables
+
+The following command will run the given command when the given variable is changed:
+
+```cmake
+variable_watch(<variable> [<command>])
+```
+
+
+## Using a Proper Debugger
+
+Since version 3.27, CMake supports debugging the `CMakeLists.txt` files using a debugger!
+
+The debugger is a *quite powerful* tool in your disposal - it can show you exactly which targets you have, the content of their properties, the content of the global `CMAKE_*` properties.
+
+And, as a debugger does, it allows you to debug the logic of your CMake files, whether it be functions or some `if()` statements.
+
+### On VSCode
+
+- Install the `vscode-cmake-tools` extension (which is a microsoft-developed extension, so you won't miss it on the extension store).
+- Use the command `CMake: Configure with CMake Debugger` or [define the `launch.json` configurations](https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/debug.md).
+- Set your breakpoints and debug as you would a normal program.
+
