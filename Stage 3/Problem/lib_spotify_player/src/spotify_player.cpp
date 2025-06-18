@@ -19,9 +19,16 @@ namespace spotify_player
 
         return true;
     }
+
+#ifdef SPOTIFY_ENABLE_BLUETOOTH
+    void SpotifyPlayer::enable_bluetooth()
+    {
+        std::cout << "Enabled bluetooth!" << std::endl;
+    }
+#endif
         
     bool is_valid_track_id(int track_id)
     {
-        return (track_id > 0) && (track_id < 10)
+        return (track_id > 0) && (track_id < 10);
     }
 } // namespace spotify_player

@@ -23,6 +23,10 @@ namespace spotify_player
          * @note Caller has to call `set_track_id` before calling this method.
          */
         virtual bool play_music() override;
+    
+#ifdef SPOTIFY_BLUETOOTH_ENABLE
+        void enable_bluetooth();
+#endif
 
     private:
         int track_id;
