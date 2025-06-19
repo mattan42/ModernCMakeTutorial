@@ -1,4 +1,5 @@
 #include "spotify_player/spotify_player.hpp"
+#include <iostream>
 
 namespace spotify_player
 {

@@ -24,7 +24,7 @@ namespace spotify_player
          */
         virtual bool play_music() override;
     
-#ifdef SPOTIFY_BLUETOOTH_ENABLE
+#ifdef SPOTIFY_ENABLE_BLUETOOTH
         void enable_bluetooth();
 #endif
 
