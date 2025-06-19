@@ -12,7 +12,7 @@ namespace music_player
         /**
          * @brief Plays music from a source.
          */
-        virtual bool play_music() = 0
+        virtual bool play_music() = 0;
     };
 } // namespace music_player
 
