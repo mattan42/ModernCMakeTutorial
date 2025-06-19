@@ -10,10 +10,11 @@ MultiMusicPlayer::MultiMusicPlayer(Source source) :
     }
 }
 
-bool MultiMusicPlayer::search_track(std::string track_name)
+bool MultiMusicPlayer::search_track(const std::string &track_name)
 {
     // Dummy implementaiton
     this->spotify_player.set_track_id(8);
+    return true;
 }
 
 bool MultiMusicPlayer::enable_bluetooth()

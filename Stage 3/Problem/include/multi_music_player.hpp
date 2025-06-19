@@ -25,7 +25,7 @@ public:
      * 
      * @return true on success, false otherwise.
      */
-    bool search_track(std::string track_name);
+    bool search_track(const std::string &track_name);
 
     /**
      * @brief Tries enabling bluetooth for the current source.
