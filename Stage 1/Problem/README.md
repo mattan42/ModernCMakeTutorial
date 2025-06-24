@@ -32,6 +32,6 @@ The second command, `make` is using the Make build-system to compile your projec
 1. Create a `CMakeLists.txt` file which compiles the `main.cpp` file.
 2. Compile and run the `main.cpp` file. Make sure you can see the prints.
 3. Compile the `main.cpp` file with the `DONT_PRINT_HELLO_WORLD` preprocessor define. Run it and make sure the print changes.
-4. Compile at once both `main.cpp` and `another_main.cpp`; Don't have two separate `CMakeLists.txt` files for the executables and don't move the source files from the current directory structure.
+4. Compile at once both `main.cpp` and `another_main.cpp` (two separate executables, one for each file); Don't have two separate `CMakeLists.txt` files for the executables and don't move the source files from the current directory structure.
 5. Add the `DONT_PRINT_HELLO_WORLD` ONLY to `another_main.cpp`. Compile and run both executables and see that `main.cpp` prints "Hello World" normally and that `another_main.cpp` prints an additional initial print.
 6. Keep your `CMakeLists.txt` file you've written until this step. Find a way to compile only one binary.
