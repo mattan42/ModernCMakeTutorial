@@ -7,12 +7,15 @@ CMake has kind of a weird but nice way of allowing to create different build typ
 Theres the `CMAKE_BUILD_TYPE` variable that the user can specify when calling `cmake`:
 
 ```bash
-cmake -Bbuild -DCMAKE_BUILD_TYPE=Debug .
+cmake -Bbuild -DCMAKE_BUILD_TYPE=DEBUG .
 ```
 
 This `CMAKE_BUILD_TYPE` contains a string with the name of the `CONFIG`. CMake then automatically tries using the following variables:
 - `CMAKE_<LANG>_FLAGS_<CONFIG>`
 - `CMAKE_<TARGETTYPE>_LINKER_FLAGS_<CONFIG>`
+
+> [!Info]
+> Note that you don't need to do an `if (CMAKE_BUILD_TYPE STREQUL DEBUG)` to verify on which build-type you are - CMake already automaticallyl does that and takes the appropriate variables based on the `<LANG>` and `<CONFIG>`(=`CMAKE_BUILD_TYEP`) values it has received from the user.
 
 So, in order to set debug flags for C++ targets, we would do:
 

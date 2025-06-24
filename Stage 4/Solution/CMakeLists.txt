@@ -10,7 +10,7 @@ if(isMultiConfig)
     # We don't support that
     message(FATAL_ERROR "This CMakeLists.txt doesn't support multi-config bulid systems")
 else()
-    set(allowedBuildTypes Debug Release Warning)
+    set(allowedBuildTypes DEBUG RELEASE WARNING)
 
     # If the CMAKE_BUILD_TYPE wasn't specified, force a Debug build.
     if(NOT CMAKE_BUILD_TYPE)

@@ -21,3 +21,6 @@ Once you fell you've accoplished the goal / you're too stuck at trying to find a
 After going through the explanation and the solution itself, you can advance to the next stage.
 
 Good Luck and Enjoy!
+
+> [!Note]
+> All examples of command lines in this tutorial use Makefile's `make` commdn.
